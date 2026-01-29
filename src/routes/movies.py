@@ -33,7 +33,7 @@ async def get_movies(
     if not movies:
         raise HTTPException(status_code=404, detail="No movies found.")
 
-    base_path = "/api/v1/theater/movies/"
+    base_path = "/theater/movies/"
 
     prev_page = None
     if page > 1:
