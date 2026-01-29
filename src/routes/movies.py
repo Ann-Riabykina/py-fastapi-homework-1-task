@@ -7,7 +7,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from database import MovieModel, get_db
 from schemas.movies import MovieDetailResponseSchema, MovieListResponseSchema
 
-router = APIRouter()
+router = APIRouter(prefix="/movies")
 
 
 @router.get("/", response_model=MovieListResponseSchema)
